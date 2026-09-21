@@ -1,1 +1,1 @@
-void ciTest( ){}
+void ciTest() {}
