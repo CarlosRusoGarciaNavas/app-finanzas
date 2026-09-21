@@ -6,7 +6,7 @@ Visión, alcance, hitos y criterio de éxito: @docs/vision-v1.md
 
 ## Estado
 
-- Fase actual: preparación, luego spike, luego hito 1 (personal, local y offline, sin backend).
+- Fase actual: entorno preparado y verificación automática en marcha; luego spike, luego hito 1 (personal, local y offline, sin backend).
 - El nombre del proyecto y el identificador del paquete Android son provisionales.
 
 ## Stack
@@ -22,9 +22,10 @@ Visión, alcance, hitos y criterio de éxito: @docs/vision-v1.md
 - Analizar: `flutter analyze`
 - Tests: `flutter test` (mientras se trabaja, preferir ejecutar solo el fichero afectado)
 - Formato: `dart format .`
+- Comprobar formato sin modificar: `dart format --output=none --set-exit-if-changed .`
 - Ejecutar: `flutter run`
 
-Antes de dar una tarea por terminada, `flutter analyze` y `flutter test` deben pasar sin errores.
+Antes de dar una tarea por terminada, `flutter analyze` y `flutter test` deben pasar sin errores. El hook local (solo Windows) formatea los `.dart` que Claude edita; la CI, en cada pull request hacia `main`, comprueba formato, análisis y tests.
 
 ## Reglas de dominio (no negociables)
 
